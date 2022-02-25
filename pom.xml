@@ -34,6 +34,37 @@
         <scm.connection>scm:git:https://github.com/FocusFish/UVMS-Frontend.git</scm.connection>
     </properties>
 
+    <profiles>
+        <profile>
+            <id>proxy</id>
+            <activation>
+                <property>
+                    <name>bowerproxy</name>
+                </property>
+            </activation>
+            <properties>
+                <bower.args>update --config.proxy=${bowerproxy}
+                    --config.https-proxy=${bowerproxy}
+                </bower.args>
+                <npm.args>update --proxy=${bowerproxy}
+                    --https-proxy=${bowerproxy}
+                </npm.args>
+            </properties>
+        </profile>
+        <profile>
+            <id>noproxy</id>
+            <activation>
+                <property>
+                    <name>!bowerproxy</name>
+                </property>
+            </activation>
+            <properties>
+                <bower.args>update</bower.args>
+                <npm.args>update</npm.args>
+            </properties>
+        </profile>
+    </profiles>
+
     <build>
         <finalName>${project.name}</finalName>
         <pluginManagement>

@@ -173,7 +173,7 @@ angular.module('unionvmsWeb').controller('AreasselectionfieldsetCtrl',function($
     var setSystemItems = function(){
         $scope.isLoadingAreaLayers = true;
         spatialRestService.getAreaLayers().then(function(response){
-            $scope.systemAreaTypes = response.data;
+            $scope.systemAreaTypes = response;
             for (var i = 0; i < $scope.systemAreaTypes.length; i++){
                 $scope.systemItems.push({"text": $scope.systemAreaTypes[i].typeName, "code": $scope.systemAreaTypes[i].typeName});
             }

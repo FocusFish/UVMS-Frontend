@@ -13,7 +13,7 @@ angular.module('unionvmsWeb').factory('spatialRestFactory', function($resource,$
     return {
         getAreaLayers: function(){
             return $resource('spatial/rest/area/layers', {}, {
-                'get': {method: 'GET'}
+                'get': {method: 'GET', isArray: true}
             });
         },
         getAreaLocationLayers: function(){

@@ -49,6 +49,5 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
-    "eventsource": "^1.0.7"
   }
 }

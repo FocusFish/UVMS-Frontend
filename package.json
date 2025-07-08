@@ -39,7 +39,7 @@
     "karma-coverage": "~1.1.1",
     "karma-firefox-launcher": "~1.0.1",
     "karma-jasmine": "~0.1.5",
-    "karma-jasmine-matchers": "~3.7.0",
+    "karma-jasmine-matchers": "~5.0.0",
     "karma-junit-reporter": "~1.2.0",
     "karma-mocha-reporter": "~2.2",
     "karma-phantomjs-launcher": "~1.0.4",
